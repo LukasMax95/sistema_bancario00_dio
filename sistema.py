@@ -58,7 +58,11 @@ class Banco:
                     valor = self.valorSaque()
                     self.retirar(valor)
             elif c == "e":
-                self.extrato()
+                if len(extrato) == 0:
+                    print("Não foi possível a operação.\n"
+                          + "Extrato Zerado")
+                else:
+                    self.extrato()
             elif c == "q":
                 print("Saindo do Banco!")
                 break
