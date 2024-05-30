@@ -237,6 +237,7 @@ def main():
                 print('''
                     [a] pra acessar
                     [c] pra criar conta
+                    [l] listar contas
                     [u] para atualizar
                     [q] pra sair
                 ''')
@@ -251,6 +252,9 @@ def main():
                     conta.nova_conta(nome)
                 elif c2 == "u":
                     conta.novodia()
+                elif c2 == "l":
+                    for usuario in conta.usuarios:
+                        print(usuario)
                 elif c2 == "q":
                     print("Saindo")
                     c1 = "q"
